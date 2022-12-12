@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result Checker</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            height: auto;
+        }
+
+        .h1 {
+            height: auto;
+            margin-top: -0.1rem;
+            font-size: 33px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+            background-color: rgb(54, 69, 64);
+        }
+
+        .Result {
+            margin: 1.6rem 0 0 1.6rem;
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        .resultsNext {
+            font-weight: 400;
+        }
+
+        #expect {
+            font-size: 17px;
+            margin: 0.2rem 0.2rem 0 1.6rem
+        }
+
+        form {
+
+            height: auto;
+            margin: 1rem 2rem;
+            padding: 0.5rem 1rem;
+        }
+
+        .required {
+            color: red;
+            ;
+        }
+
+        input {
+            width: 100%;
+            max-width: 500px;
+            height: 24px;
+            border-radius: 5px;
+            border: 1.333px solid black;
+            margin-bottom: 0.5rem;
+            margin-top: 0.3rem;
+            padding: 4px 0px 4px 7px;
+            outline: none;
+
+        }
+
+        .scoreText {
+            margin: 1.1rem 0 0.5rem 1.6rem;
+            font-weight: 700;
+            font-size: 20px;
+
+        }
+
+        .subjects {
+            margin-left: 1.6rem;
+            font-weight: 470;
+            font-size: 18px;
+
+        }
+
+        .scoreField {
+            width: 20%;
+            max-width: 130px;
+            padding: 4px;
+        }
+
+        .flexField {
+            display: inline;
+
+            margin-left: 2rem
+        }
+
+        .submit {
+            display: flex;
+            justify-content: center;
+            margin: 1rem 0 1rem 2rem;
+            width: 50%;
+            max-width: 400px;
+            padding: 0.4rem 1rem;
+            background-color: rgb(44, 123, 78);
+            ;
+            border: none;
+            border-radius: 20px;
+            color: ghostwhite;
+            font-size: 15px;
+
+        }
+
+        .submit:hover,
+        .CGPA:hover,
+        .CGPA:active,
+        .submit:active {
+            background-color: rgba(44, 123, 78, 0.8);
+        }
+
+        .nxt {
+            padding: 0.1rem 0.5rem;
+        }
+
+        .resultTotal {
+            margin-left: 1.6rem;
+            font-weight: 470;
+            font-size: 18px;
+        }
+
+        .CGPA {
+            display: flex;
+            justify-content: center;
+            margin: 1rem 0 1rem 2rem;
+            width: 50%;
+            max-width: 400px;
+            padding: 0.4rem 1rem;
+            background-color: rgb(44, 123, 78);
+            ;
+            border: none;
+            border-radius: 20px;
+            color: ghostwhite;
+            font-size: 15px;
+
+        }
+
+        .scoreBoldText {
+            font-weight: 800;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1 class="h1">Wecome to Emmanuel odii's portal</h1>
+        <p class="Result">RESULT-CHECK <span class="resultsNext">(For sciences)</span></p>
+        <p id="expect">You are expected to fill in your Name, Matriculation number and Examscore. </p>
+    </header>
+
+    <main>
+        <form action="">
+            <label for="Name">Enter Your Name<span class="required">*</span> <input required id="Name"
+                    placeholder=" Name" type="text"> </label>
+            <br> <label for="ID">Enter Your Matric No<span class="required">*</span><input required id="ID"
+                    placeholder=" Matric no" type="text"></label>
+
+            <p id="matricCheck"></p>
+        </form>
+            <h1 class="scoreText">SCORES</h1>
+            <div><label for="Chemistry" class="subjects">Maths 01(%): <div class="flexField"><input type="number"
+                            max="100" class="scoreField" placeholder=" Test" id="mathsTest" min="0"> <input
+                            class="scoreField" type="number" max="100" min="0" placeholder=" Exams-score"
+                            id="mathsExam"></div></label></div>
+            <div class="firstDiv"><label for="Chemistry" class="subjects">Chem 01(%): <div class="flexField"><input
+                            type="number" min="0" class="scoreField" placeholder=" Test" max="100" id="chemTest"> <input
+                            class="scoreField" min="0" type="number" max="100" placeholder=" Exams-score" id="chemExam">
+                    </div></label></div>
+            <div class="firstDiv"><label for="Chemistry" class="subjects">Phys 108(%): <div class="flexField"><input
+                            type="number" class="scoreField" placeholder=" Test" max="100" min="0" id="physTest"> <input
+                            max="100" min="0" class="scoreField" type="number" placeholder=" Exams-score" id="physExam">
+                    </div></label></div>
+            <div class="firstDiv"><label for="Chemistry" class="subjects">English a(%): <div class="flexField"><input
+                            type="number" class="scoreField" placeholder=" Test" max="100" min="0" id="englishTest">
+                        <input class="scoreField" min="0" max="100" type="number" placeholder=" Exams-score"
+                            id="englishExam"></div></label></div>
+            <div class="firstDiv"><label for="Chemistry" class="subjects">Biolgy 01(%): <div class="flexField"><input
+                            type="number" class="scoreField" placeholder=" Test" max="100" min="0" id="biolgyTest">
+                        <input class="scoreField" min="0" max="100" type="number" placeholder=" Exams-score"
+                            id="biolgyExam"></div></label></div>
+            <div class="firstDiv"><label for="Chemistry" class="subjects">Agrics 20(%): <div class="flexField"><input
+                            type="number" class="scoreField" placeholder=" Test" max="100" min="0" id="agricsTest">
+                        <input class="scoreField" min="0" max="100" type="number" placeholder=" Exams-score"
+                            id="agricsExam"></div></label></div>
+            <div class="firstDiv"><label for="Chemistry" class="subjects">General K(%): <div class="flexField"><input
+                            type="number" class="scoreField" placeholder=" Test" max="100" min="0" id="generalTest">
+                        <input class="scoreField" min="0" max="100" type="number" placeholder=" Exams-score"
+                            id="generalExam"></div></label></div>
+            </div>
+
+
+        <button class="submit" id="submitBtn" type="button" onclick='submit()' >Submit</button>
+
+
+        <div class="resultTotal">
+            <p id="namePrint"></p><br>
+            <p id="ms"></p><br>
+            <p id="cm"></p><br> 
+            <p id="ps"></p><br>
+            <p id="eh"></p><br>
+            <p id="by"></p><br>
+            <p id="as"></p><br>
+            <p id="gl"></p><br>
+        </div>
+
+    </main>
+
+
+
+    <script>
+            let SubmitBtn = document.querySelector('#submitBtn');
+        
+        let Matriculation = document.querySelector('#ID').value;
+
+        const submit = () => {
+            let myName = document.querySelector('#Name').value
+            let inverse = myName.toUpperCase()
+            let greet = document.querySelector('#namePrint').innerText = ` DEAR ${inverse}, check your results below `;
+            document.querySelector('#namePrint').style.fontWeight = "600"
+            
+            if (Matriculation.length < 9) {
+                document.querySelector('#matricCheck').innerText = `Your Matric number must have 10 characters.`
+            }
+            if (Matriculation.length > 10) {
+                document.querySelector('#matricCheck').innerText = ''}
+            /*
+             Score range For subjects:
+                let Total = Test + Exam score;
+                if (180 <= Total >= 200) == A1;
+                if (142 <= Total >= 178) == A2;
+                if (130 <= Total >= 140) == B3;
+                if (120 <= Total >= 128) == C4;
+                if (110 <= Total >= 118) == C5;
+                if (100 <= Total >= 108) == C6;
+                if (90 <= Total >= 98 ) == D7;
+                if (80 <= Total >= 88) == E8;
+                if (0 <= Total >= 78) == A1;  
+              ___________________________________________
+            
+            Score range for CGPA's:
+                    Nigerian CGPA:
+                4.5 - 5.0 == 'First class'
+                3.5 - 4.49 == 'Second class Upper'
+                2.4 - 3.49 == 'Second class Lower'
+                1.5 - 2.39 == 'Third class'
+                1.0 - 1.49 == 'Pass'
+              ___________________________________________
+            
+                  Emmauel Odii's CGPA convert
+                Total score = 200*7 = 1400;
+                1260 >= Score <= 1400 == 'First class'
+                 >= Score <= 1400 == 'First class'
+            
+            */
+
+            let a1 = document.querySelector('#mathsTest').value;
+            let numberA1 = Number(a1)
+            let a2 = document.querySelector('#mathsExam').value;
+            let numberA2 = Number(a2);
+            let totalA = Number(numberA1 + numberA2);
+
+
+            if (totalA >= 180 && totalA <= 200) {
+                document.querySelector('#ms').innerText = `Maths 01 : A1`
+            }
+            else if (totalA >= 142 && totalA <= 178) {
+                document.querySelector('#ms').innerText = `Maths 01 : A2`
+            }
+            else if (totalA == '') {
+                document.querySelector('#ms').innerText = `Maths 01 : is Empty.`
+            }
+
+            else if (totalA >= 130 && totalA <= 140) {
+                document.querySelector('#ms').innerText = `Maths 01 : B3`
+            }
+            else if (totalA >= 120 && totalA <= 128) {
+                document.querySelector('#ms').innerText = `Maths 01 : C4`
+            }
+            else if (totalA >= 110 && totalA <= 118) {
+                document.querySelector('#ms').innerText = `Maths 01 : C5`
+            }
+            else if (totalA >= 100 && totalA <= 108) {
+                document.querySelector('#ms').innerText = `Maths 01 : C6`
+            }
+            else if (totalA >= 90 && totalA <= 98) {
+                document.querySelector('#ms').innerText = `Maths 01 : D7`
+            }
+            else if (totalA >= 80 && totalA <= 88) {
+                document.querySelector('#ms').innerText = `Maths 01 : E8`
+            } else if (totalA >= 0 && totalA <= 78) {
+                document.querySelector('#ms').innerText = `Maths 01 : F9`
+            }
+            else {
+                document.querySelector('#ms').innerText = `Maths 01 : Score cannot be greater than 100 or 0`
+            }
+
+            //Chem
+
+            let b1 = document.querySelector('#chemTest').value;
+            let numberB1 = Number(b1);
+            let b2 = document.querySelector('#chemExam').value;
+            let numberB2 = Number(b2);
+            let totalB = Number(numberB1 + numberB2);
+            if (totalB >= 180 && totalB <= 200) {
+                document.querySelector('#cm').innerText = `Chem 01 : A1`
+            }
+            else if (totalB >= 142 && totalB <= 178) {
+                document.querySelector('#cm').innerText = `Chem 01 : A2`
+            }
+            else if (totalB == '') {
+                document.querySelector('#cm').innerText = `Chem 01 : is Empty.`
+            }
+
+            else if (totalB >= 130 && totalB <= 140) {
+                document.querySelector('#cm').innerText = `Chem 01 : B3`
+            }
+            else if (totalB >= 120 && totalB <= 128) {
+                document.querySelector('#cm').innerText = `Chem 01 : C4`
+            }
+            else if (totalB >= 110 && totalB <= 118) {
+                document.querySelector('#cm').innerText = `Chem 01 : C5`
+            }
+            else if (totalB >= 100 && totalB <= 108) {
+                document.querySelector('#cm').innerText = `Chem 01 : C6`
+            }
+            else if (totalB >= 90 && totalB <= 98) {
+                document.querySelector('#cm').innerText = `Chem 01 : D7`
+            }
+            else if (totalB >= 80 && totalB <= 88) {
+                document.querySelector('#cm').innerText = `Chem 01 : E8`
+            }
+            else if (totalB >= 0 && totalB <= 78) {
+                document.querySelector('#cm').innerText = `Chem 01 : F9`
+            }
+            else {
+                document.querySelector('#cm').innerText = `Chem 01 : Score cannot be above 100 or zero`
+            }
+
+            let c1 = document.querySelector('#physTest').value;
+            let numberC1 = Number(c1);
+            let c2 = document.querySelector('#physExam').value;
+            let numberC2 = Number(c2);
+            let totalC = Number(numberC1 + numberC2);
+            if (totalC >= 180 && totalC <= 200) {
+                document.querySelector('#ps').innerText = `Phys 01 : A1`
+            }
+            else if (totalC >= 142 && totalC <= 178) {
+                document.querySelector('#ps').innerText = `Phys 108 : A2`
+            }
+            else if (totalC == '') {
+                document.querySelector('#ps').innerText = `Phys 108 : is Empty.`
+            }
+            else if (totalC >= 130 && totalC <= 140) {
+                document.querySelector('#ps').innerText = `Phys 108 : B3`
+            }
+            else if (totalC >= 120 && totalC <= 128) {
+                document.querySelector('#ps').innerText = `Phys 108 : C4`
+            }
+            else if (totalC >= 110 && totalC <= 118) {
+                document.querySelector('#ps').innerText = `Phys 108 : C5`
+            }
+            else if (totalC >= 100 && totalC <= 108) {
+                document.querySelector('#ps').innerText = `Phys 108 : C6`
+            }
+            else if (totalC >= 90 && totalC <= 98) {
+                document.querySelector('#ps').innerText = `Phys 108 : D7`
+            }
+            else if (totalC >= 80 && totalC <= 88) {
+                document.querySelector('#ps').innerText = `Phys 108 : E8`
+            }
+            else if (totalC >= 0 && totalC <= 78) {
+                document.querySelector('#ps').innerText = `Phys 108 : F9`
+            }
+            else {
+                document.querySelector('#ps').innerText = `Phys 108 : Score cannot be above 100 or 0`
+            }
+
+
+
+            let d1 = document.querySelector('#englishTest').value;
+            let numberD1 = Number(d1);
+            let d2 = document.querySelector('#englishExam').value;
+            let numberD2 = Number(d2);
+            let totalD = Number(numberD1 + numberD2);
+            if (totalD >= 180 && totalD <= 200) {
+                document.querySelector('#eh').innerText = `English a: A1`
+            }
+            else if (totalD >= 142 && totalD <= 178) {
+                document.querySelector('#eh').innerText = `English a : A2`
+            }
+            else if (totalB == '') {
+                document.querySelector('#eh').innerText = `English a : is Empty.`
+            }
+            else if (totalD >= 130 && totalD <= 140) {
+                document.querySelector('#eh').innerText = `English a: B3`
+            }
+            else if (totalD >= 120 && totalD <= 128) {
+                document.querySelector('#eh').innerText = `English a : C4`
+            }
+            else if (totalD >= 110 && totalD <= 118) {
+                document.querySelector('#eh').innerText = `English a : C5`
+            }
+            else if (totalD >= 100 && totalD <= 108) {
+                document.querySelector('#eh').innerText = `English a: C6`
+            }
+            else if (totalD >= 90 && totalD <= 98) {
+                document.querySelector('#eh').innerText = `English a : D7`
+            }
+            else if (totalD >= 80 && totalD <= 88) {
+                document.querySelector('#eh').innerText = `Englsh a : E8`
+            }
+            else if (totalD >= 0 && totalD <= 78) {
+                document.querySelector('#eh').innerText = `English a : F9`
+            }
+            else {
+                document.querySelector('#eh').innerText = `English a : Score cannot be above 100 or 0`
+            }
+
+
+
+
+            let e1 = document.querySelector('#biolgyTest').value;
+            let numberE1 = Number(e1);
+            let e2 = document.querySelector('#biolgyExam').value;
+            let numberE2 = Number(e2);
+            let totalE = Number(numberE1 + numberE2);
+
+            if (totalE >= 180 && totalE <= 200) {
+                document.querySelector('#by').innerText = `Biolgy 01 : A1`
+            }
+            else if (totalE >= 142 && totalE <= 178) {
+                document.querySelector('#by').innerText = `Biolgy 01 : A2`
+            }
+            else if (totalE >= 130 && totalE <= 140) {
+                document.querySelector('#by').innerText = `Biolgy 01 : B3`
+            }
+            else if (totalE == '') {
+                document.querySelector('#by').innerText = `Biolgy 01 : is Empty.`
+            }
+            else if (totalE >= 120 && totalE <= 128) {
+                document.querySelector('#by').innerText = `Biolgy 01: C4`
+            }
+            else if (totalE >= 110 && totalE <= 118) {
+                document.querySelector('#by').innerText = `Biolgy 01: C5`
+            }
+            else if (totalE >= 100 && totalE <= 108) {
+                document.querySelector('#by').innerText = `Biolgy 01 : C6`
+            }
+            else if (totalE >= 90 && totalE <= 98) {
+                document.querySelector('#by').innerText = `Bioloy 01 : D7`
+            }
+            else if (totalE >= 80 && totalE <= 88) {
+                document.querySelector('#by').innerText = `Biolgy 01 : E8`
+            }
+            else if (totalE >= 0 && totalE <= 78) {
+                document.querySelector('#by').innerText = `Biolgy 01 : F9`
+            }
+            else {
+                document.querySelector('#by').innerText = `Biolgy 01 : Score cannot be above 100 or 0`
+            }
+
+
+
+            let f1 = document.querySelector('#agricsTest').value;
+            let numberF1 = Number(f1);
+            let f2 = document.querySelector('#agricsExam').value;
+            let numberF2 = Number(f2);
+            let totalF = Number(numberF1 + numberF2);
+            if (totalF >= 180 && totalF <= 200) {
+                document.querySelector('#as').innerText = `Agrics 20 : A1`
+            }
+            else if (totalF >= 142 && totalF <= 178) {
+                document.querySelector('#as').innerText = `Agrics 20 : A2`
+            }
+            else if (totalF == '') {
+                document.querySelector('#as').innerText = `Agrics 20 : is Empty.`
+            }
+            else if (totalF >= 130 && totalF <= 140) {
+                document.querySelector('#as').innerText = `Agrics 20: B3`
+            }
+            else if (totalF >= 120 && totalF <= 128) {
+                document.querySelector('#as').innerText = `Eglish a : C4`
+            }
+            else if (totalF >= 110 && totalF <= 118) {
+                document.querySelector('#as').innerText = `Agrics 20 : C5`
+            }
+            else if (totalF >= 100 && totalF <= 108) {
+                document.querySelector('#as').innerText = `Agrics 20 : C6`
+            }
+            else if (totalF >= 90 && totalF <= 98) {
+                document.querySelector('#as').innerText = `Agrics 20 : D7`
+            }
+            else if (totalF >= 80 && totalF <= 88) {
+                document.querySelector('#as').innerText = `Agrics 20: E8`
+            }
+            else if (totalF >= 0 && totalF <= 78) {
+                document.querySelector('#as').innerText = `Agrics 20: F9`
+            }
+            else {
+                document.querySelector('#as').innerText = `Agrics 20 : Score cannot be above 100 or 0`
+            }
+
+
+
+
+            let g1 = document.querySelector('#generalTest').value;
+            let numberG1 = Number(g1);
+            let g2 = document.querySelector('#generalExam').value;
+            let numberG2 = Number(g2);
+            let totalG = Number(numberG1 + numberG2);
+            if (totalG >= 180 && totalG <= 200) {
+                document.querySelector('#gl').innerText = `General K : A1`
+            }
+            else if (totalG >= 142 && totalG <= 178) {
+                document.querySelector('#gl').innerText = `General K : A2`
+            }
+            else if (totalG == '') {
+                document.querySelector('#gl').innerText = `General K : is Empty.`
+            }
+            else if (totalG >= 130 && totalG <= 140) {
+                document.querySelector('#gl').innerText = `General K : B3`
+            }
+            else if (totalG >= 120 && totalG <= 128) {
+                document.querySelector('#gl').innerText = `General K : C4`
+            }
+            else if (totalG >= 110 && totalG <= 118) {
+                document.querySelector('#gl').innerText = `General K : C5`
+            }
+            else if (totalG >= 100 && totalG <= 108) {
+                document.querySelector('#gl').innerText = `General K : C6`
+            }
+            else if (totalG >= 90 && totalG <= 98) {
+                document.querySelector('#gl').innerText = `General K : D7`
+            }
+            else if (totalG >= 80 && totalG <= 88) {
+                document.querySelector('#gl').innerText = `General K : E8`
+            }
+            else if (totalG >= 0 && totalG <= 78) {
+                document.querySelector('#gl').innerText = `General K: F9`
+            }
+            else {
+                document.querySelector('#gl').innerText = `General K : Score cannot be above 100 or 0`
+            }
+            
+
+
+            let main = document.createElement('button');
+            let mainText = document.createTextNode("Show CGPA");
+            main.appendChild(mainText);
+            main.className = "CGPA"
+            document.body.appendChild(main)
+
+
+
+            const checkCGPA = () => {
+                let allTotal = totalA + totalB + totalC + totalD + totalE + totalF + totalG;
+                let cgpaScore = document.createElement('p');
+                let cgpaScoreText = document.createTextNode(" ");
+                cgpaScore.appendChild(cgpaScoreText)
+                document.body.appendChild(cgpaScore)
+                cgpaScore.className = 'cgpaText';
+
+                if (allTotal >= 1260 && allTotal <= 1400) {
+                    alert("FIRST-CLASS")
+                }
+
+                else if (allTotal >= 980 && allTotal <= 1257.2) {
+                    alert("SECOND-CLASS UPPER")
+                }
+                else if (allTotal >= 672 && allTotal <= 977.2) {
+                    alert("SECOND-CLASS LOWER")
+                }
+                else if (allTotal >= 420 && allTotal <= 669.2) {
+                    alert("THIRD- CLASS")
+                }
+                else if (allTotal >= 200 && allTotal <= 417.2) {
+                    alert("you've got a PASS ")
+                }
+                else if (allTotal == "0") {
+                    alert('Please, provide a score')
+                }
+                else {
+                    alert("you FAILED, Try again in the next Semester.")
+                }
+            }
+            main.addEventListener('click', checkCGPA)
+
+
+
+
+        }
+
+        
+    </script>
+
+</body>
+
+</html>
