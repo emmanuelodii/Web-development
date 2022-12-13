@@ -8,7 +8,7 @@
 }
 
 @media(max-width: 1700px) and (min-width: 1200px) {
-  header {
+  #navbar {
     display: flex;
     width: 25%;
     height: 1vh;
@@ -16,7 +16,7 @@
   }
   main {
     position: absolute;
-    left: 310px;
+    left: 330px;
     width: 75%;
     margin-left: 2rem;
     
@@ -47,6 +47,7 @@ body {
   font-family: sans-serif, verdana;
   width: 100%;
   padding-bottom: 10px;
+  overflow-x: hidden;
 }
 
 p,
@@ -98,7 +99,7 @@ li {
 
 }
 
-.firstpara .text {
+.main-section .text {
   width: 85%;
   margin: 1.1rem auto;
   line-height: 20px;
@@ -112,14 +113,6 @@ li {
   margin-left: 3rem;
   margin-bottom: 10px;
   line-height: 20px;
-}
-
-.example {
-  width: 80%;
-  margin-left: 3rem;
-  background-color: rgba(173, 169, 169, 0.5);
-  padding: 0.5rem 2rem;
-  border-radius: 10px;
 }
 
 
@@ -137,7 +130,13 @@ li {
   text-indent: 8px;
   margin-left: 3rem;
   margin-bottom: 10px;
-  line-height: 20px;
-  
+  line-height: 20px; 
 
+}
+.example {
+ width: 80%;
+ margin-left: 3rem;
+  background-color: rgba(173, 169, 169, 0.5);
+  padding: 0.5rem 2rem;
+  border-radius: 10px;
 }

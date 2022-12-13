@@ -1,0 +1,163 @@
+*{
+padding: 0;
+margin: 0;
+}
+:root {
+    --background-color1: rgb(240, 39, 39);
+    --background-color1a: rgba(251, 27, 27);
+    --background-color2: rgb(240, 190, 12);
+    --background-color2a: rgb(255, 200, 0);
+    --font-color1: #000;
+    --font-color2: #fff;
+    --font-color3: rgb(80, 75, 75);
+    --font-color3a: rgba(80, 75, 75, 0.11);
+    --font-color4: #1b1b32;
+    --font-color5: rgb(59, 151, 188);
+}
+
+body{
+font-family: sans-serif;
+overflow: hidden;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    margin: 2rem auto ;
+    width: 80%;
+    text-align: center;
+    padding: 0 6px;
+    height: 100vh;
+    overflow: hidden;
+    max-width: 500px;
+}
+.heart {
+    color: var(--background-color1)
+}
+.navText {
+    font-weight: 600;
+    width: 600px;
+    
+}
+.fieldset {
+    height: auto;
+    width:  70%;
+    border: 1.3px solid var(--font-color3);
+    height: auto;
+    padding-bottom: 10px;
+}
+.legend {
+    text-align: left;
+}
+.security {
+    margin-left: 8px;
+    padding-right: 4px;
+    letter-spacing: 0.5px;
+    color: var(--font-color3)
+
+}
+.lock {
+    color: #000;
+    margin-right: 2px;
+}
+fieldset button {
+    width: 95%;
+    padding: 7px 0;
+    background-color: var(--background-color2);
+    border: 1px solid var(--background-color2);
+    border-radius: 3px;
+}
+fieldset button:hover, fieldset button:active {
+    background-color: var(--background-color2a);
+    cursor: pointer;
+}
+.pay {
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--font-color4);
+    
+}
+.pal {
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--font-color5);
+}
+.nav-donate {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    margin-top: 15px;
+}
+.patreon {
+    color: var(--font-color2);
+    background-color: var(--background-color1);
+    border-radius: 3px;
+    width: 95%;
+    padding: 7px 0;
+    border: 1px solid var(--background-color1);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.patreon:active, .patreon:hover {
+    background-color: var(--background-color1a);
+    cursor: pointer;
+}
+.fieldset2 {
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    padding-left: 10px;
+    border-top: 1px solid var(--font-color3); 
+    margin: 1em 10px
+}
+.legend2 {
+    color: var(--font-color3);
+    padding: 5px;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+.inputdiv {
+    display: flex;
+    align-items: center;
+    margin: -3px auto 0 auto;
+    width: 95%;
+    margin-top: -10px;
+    
+}
+.input1 {
+    width: 75%;
+    padding: 3px 5px;
+    border: 1.33px solid var(--font-color3);
+    border-radius: 3px 0 0 3px;
+    outline: none;
+    height: 20px;
+}
+.input2 {
+    width: 25%;
+    margin-left: -2px;
+    padding: 3px 0 3px 5px ;
+    border: 1.33px solid var(--font-color3);
+    border-radius: 0 3px 3px 0;
+    outline: none;
+    height: 20px;
+}
+.donate-footer {
+    font-weight: 700;
+    font-size: 14.5px;
+    color: var(--font-color4);
+    margin-top: 50px;
+}
+.footer {
+    display: flex;
+    justify-content: center;
+    color: var(--font-color3);
+   margin-top: 1.5rem;
+   
+}
+.footer:hover, .footer:active {
+    text-decoration: none;
+    cursor: pointer;
+    background-color: var(--font-color3a);
+    padding: 0.5px 80px;
+}

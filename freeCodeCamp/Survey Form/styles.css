@@ -1,0 +1,183 @@
+body{
+  width: 100%;
+background-image: linear-gradient( 115deg, rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7) ), url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+  height: 100vh;
+  font-family: Tahoma;
+}
+@media (max-width: 768px) {
+  #survey-form {
+    width: 80%;
+    height: 960px;
+    margin: 0;
+    margin-right: 1rem;
+  }
+}
+#title{
+  color: white;
+  text-align: center;
+  margin-top: 1em;
+  font-weight: lighter;
+}
+#description{
+  color: white;
+  text-align: center;
+  letter-spacing: 1px;
+  word-spacing: 0.5px;
+  font-style: italic;
+}
+#survey-form{
+  background-color: #1b1b32;
+  height: 900px;
+  width: 100%;
+  margin: 0 auto ;
+  max-width: 500px;
+  min-width: 300px;
+  margin-bottom: 30px;
+}
+fieldset{
+  padding: 2rem 0;
+  margin-top: 0em;
+  border: none;
+
+  
+
+}
+label{
+  color:white;
+  margin-left: 1em;
+ 
+}
+input[type="text"]{
+  display: block;
+  height: 4vh;
+  width: 90%;
+  margin-left: 1em;
+  max-width: 500px;
+  border: none;
+  border-radius: 3px;
+  margin-top: 7px;
+  font-size: 16px;
+  margin-bottom: 1.5rem;
+  outline: none;
+  padding: 0.5rem;
+
+}
+input[type="email"]{
+  display: block;
+  height: 4vh;
+  width: 90%;
+  margin-left: 1em;
+  max-width: 500px;
+  border: none;
+  border-radius: 3px;
+  margin-top: 7px;
+  font-size: 16px;
+  padding: 2px;
+  margin-bottom: 1.5rem;
+  outline: none;
+  padding: 0.5rem;
+}
+
+.email{
+  color:white;
+  margin-left: 0em;
+}
+input[type="number"]{
+  display: block;
+  height: 4vh;
+  width: 90%;
+  margin-left: 1em;
+  max-width: 500px;
+  border: none;
+  border-radius: 3px;
+  margin-top: 7px;
+  font-size: 16px;
+  padding: 2px;
+  margin-bottom: 1.5rem;
+  outline: none;
+  padding: 0.5rem;
+
+}
+.none{
+  display: none;
+}
+
+.optional{
+font-size: 14px;
+padding-top: -10px;
+}
+select{
+  display: block;
+  height: 4vh;
+  width: 90%;
+  margin-left: 1em;
+  max-width: 500px;
+  border: none;
+  border-radius: 3px;
+  margin-top: 7px;
+  font-size: 16px;
+  margin-bottom: 1.5rem;
+}
+.select{
+display: block;
+  height: 4vh;
+  width: 90%;
+  margin-left: 1em;
+  max-width: 500px;
+  border: none;
+  border-radius: 3px;
+  margin-top: 7px;
+  font-size: 16px;
+  padding: 2px;
+  margin-bottom: 1.5rem
+}
+input[type='radio']{
+  margin-left: 1em;
+  margin-top: 10px;
+  font-size: 16px;
+}
+.not
+{
+margin-left: 0;
+}
+.would{
+  margin-left: -0.7em
+}
+.see{
+  line-height: 15px;
+  margin-top: 10px;
+}
+.new{
+  margin-top: -2.9em
+}
+textarea{
+  display: block;
+  width: 90%;
+  margin-left: 1em;
+  border: none;
+  margin-top: 7px;
+  font-size: 16px;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem;
+  outline: none;
+
+}
+input[type="submit"]{
+background-color: rgb(79, 190, 79);
+  width: 90%;
+  margin-left: 1em; 
+  border: none;
+  border-radius: 2px;
+  margin-top: 7px;
+  font-size: 14px;
+  margin-top: -0.5rem;
+  color: white;
+  height: 4.4vh;
+  text-align:  center;
+}
+.videos{
+  margin-top: -1.3em
+}
+.videos2{
+  margin-top: -2.3em
+}
